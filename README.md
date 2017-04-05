@@ -1,7 +1,7 @@
 # week-7-LMAO
 
-[![Travis-Badge-Build]
-[![Code Coverage]
+[![Build Status](https://travis-ci.org/FAC10/week-7-LMAO.svg?branch=master)](https://travis-ci.org/FAC10/week-7-LMAO)
+[![codecov](https://codecov.io/gh/FAC10/week-7-LMAO/branch/master/graph/badge.svg)](https://codecov.io/gh/FAC10/week-7-LMAO)
 
 # Founders and Coders, Interesting Companies App
 
