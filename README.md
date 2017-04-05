@@ -21,9 +21,13 @@ Thus, I should be able to:
 
 - [ ]
 
-### Strech goals:
+### Stretch goals:
 
 - [ ]
+
+## Architecture & Planning
+
+ - See [here](https://github.com/FAC10/week-7-LMAO/issues/20) for our architecture diagram
 
 ## Schema diagrams
 
