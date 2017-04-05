@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.org/FAC10/week-7-LMAO.svg?branch=master)](https://travis-ci.org/FAC10/week-7-LMAO)
 [![codecov](https://codecov.io/gh/FAC10/week-7-LMAO/branch/master/graph/badge.svg)](https://codecov.io/gh/FAC10/week-7-LMAO)
 
-# Founders and Coders, Interesting Companies App
+# Founders and Coders, LMAO Jokes
 
-Live site: [Herokuapp.com/]()
+Live site: [Herokuapp.com/](https://lmao-jokes.heroku.com)
 
 Scroll to the bottom of the README for installation instructions, if you would like to run our project locally!
 
@@ -27,7 +27,7 @@ Thus, I should be able to:
 
 ## Architecture & Planning
 
- - See [here](https://github.com/FAC10/week-7-LMAO/issues/20) for our architecture diagram
+ - See [here](https://cloud.githubusercontent.com/assets/15314681/24713610/1aadf580-1a1e-11e7-8f7e-4ce3e71239b8.png) for our architecture diagram
 
 ## Schema diagrams
 
