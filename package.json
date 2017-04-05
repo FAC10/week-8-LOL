@@ -7,7 +7,7 @@
     "start": "node src/start.js",
     "start:dev": "nodemon src/start.js",
     "test": "tape tests/test.js | tap-spec",
-    "coverage": "istanbul tests/test.js"
+    "coverage": "istanbul cover tests/test.js | tap-spec"
   },
   "repository": {
     "type": "git",
