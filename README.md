@@ -19,10 +19,13 @@ Thus, I should be able to:
 
 ### Requirements
 
-- [ ]
+- [ ] Ability to log in
+- [ ] Ability to log out
+- [ ] 
 
 ### Strech goals:
 
+- [ ] Ability for new users to register for an account
 - [ ]
 
 ## Schema diagrams
