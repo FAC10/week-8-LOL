@@ -1,3 +1,17 @@
 # Learnings
 
 ## Continuous Integration
+
+### Travis Config
+
+```yml
+language: node_js
+node_js:
+  - "6.9.5"
+before_script:
+  - "psql -c 'create database lmao_test;' -U postgres"
+script:
+  - "npm run coverage"
+after_success:
+  - ./node_modules/.bin/codecov -e TRAVIS_NODE_VERSION -f coverage/coverage.json
+```
