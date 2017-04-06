@@ -1,7 +1,6 @@
 const get = require('./../handler_home');
 
 module.exports = {
-
   method: 'GET',
   path: '/',
   handler: (req, reply) => {
@@ -10,8 +9,11 @@ module.exports = {
         console.log(err);
         return;
       }
-      console.log(jokes);
-      reply.view('index', {jokes:jokes, isAuthenticated:true});
+      const options = { jokes }
+      if (req.auth.isAuthenticated) {
+        options.credentials = req.auth.credentials;
+      }
+      reply.view('index', options);
     });
   }
 
