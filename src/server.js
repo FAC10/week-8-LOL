@@ -21,7 +21,7 @@ server.views({
   engines: { hbs },
   path: 'views',
   layout: 'default',
-  layoutPath: 'views/layouts',
+  layoutPath: 'views/layout',
   partialsPath: 'views/partials',
 });
 
