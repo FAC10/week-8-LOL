@@ -2,6 +2,7 @@ module.exports = {
   method: 'POST',
   path: '/post/submit',
   handler: (request, reply) => {
-    return reply.view('index');
+    console.log(request.payload.joke);
+    return reply.view('post');
   }
 }

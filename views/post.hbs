@@ -1,5 +1,6 @@
-<form class='login-form' method='POST' action="/post_submit">
-  Joke:
-  <input type='text' name='joke' placeholder='joke' required><br>
-  <input type='submit' value='submit'>
+<h1>Submit joke</h1>
+<form class="form" action="/post/submit" method="POST">
+  <label class="form__label" for="joke">Joke:</label>
+  <textarea class="form__input" id="joke" name="joke" rows="8" required autofocus></textarea>
+  <button class="form__input form__input--btn" type="submit">Submit</button>
 </form>
