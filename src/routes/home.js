@@ -4,4 +4,6 @@ module.exports = {
   handler: (request, reply) => {
     return reply('Hello world');
   }
+
+  
 }
