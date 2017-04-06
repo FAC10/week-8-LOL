@@ -2,6 +2,8 @@ const hapi = require('hapi');
 const inert = require('inert');
 const vision = require('vision');
 const hbs = require('handlebars');
+const cookieAuth = require('hapi-auth-cookie');
+
 
 const routes = require('./routes');
 
@@ -12,8 +14,17 @@ server.connection({
   port: process.env.PORT || 3000,
 });
 
-server.register([inert, vision], (err) => {
+server.register([inert, vision, cookieAuth], (err) => {
   if (err) throw err;
+
+  var options = {
+    password: 'Iamatemporarypasswordofover32characterssothatwecangetcookiesworking',
+    cookie: 'cookie-name',
+    isSecure: false,
+    ttl: 2 * 60 * 60
+  };
+  server.auth.strategy('base', 'cookie', options);
+
   server.route(routes);
 });
 
