@@ -4,6 +4,6 @@ module.exports = {
     engines: {hbs: handlebars},
     path: 'views',
     layout: 'default',
-    layoutPath: 'views/layout',
+    layoutPath: 'views/layouts',
     partialsPath: 'views/partials'
   }
