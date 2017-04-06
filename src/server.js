@@ -21,9 +21,9 @@ server.register([inert, vision, cookieAuth], (err) => {
     password: 'Iamatemporarypasswordofover32characterssothatwecangetcookiesworking',
     cookie: 'cookie-name',
     isSecure: false,
-    ttl: 2 * 60 * 60
+    ttl: 2 * 60 * 60000
   };
-  server.auth.strategy('base', 'cookie', options);
+  server.auth.strategy('base', 'cookie', 'optional', options);
 
   server.route(routes);
 });
