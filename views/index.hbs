@@ -1,10 +1,12 @@
 {{> header}}
-
-<p>Hello Chello, qwertyuiop</p>
-
-{{#each jokes}}
-
-<li>{{body}}</li>
-<li>{{username}}</li>
-
-{{/each}}
+<h1>LMAO Jokes</h1>
+<ul>
+  {{#each jokes}}
+  <li>
+    <article>
+      <p>{{body}}</p>
+      <footer><cite>{{username}}</cite></footer>
+    </article>
+  </li>
+  {{/each}}
+</ul>
