@@ -1,5 +1,6 @@
-<form class='log_form' action='/login'>
+<form class='log_form' action='/login/submit'>
 {{# if credentials.username}}
+  <h1>Welcome back {{credentials.username}}!</h1>
 <button class='log_button' type="submit" >Log Out!</button>
 {{else}}
 <button class='log_button' type="submit" >Log In!</button>
