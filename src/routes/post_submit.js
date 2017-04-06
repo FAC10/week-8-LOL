@@ -1,8 +1,13 @@
+const postJoke = require('../postJoke');
+
 module.exports = {
   method: 'POST',
   path: '/post/submit',
   handler: (request, reply) => {
-    console.log(request.payload.joke);
-    return reply.view('post');
+    postJoke('Oli', request.payload.joke, (err, res) => {
+      if (err) console.log(err);
+      return reply.redirect('/');
+    })
+
   }
 }
