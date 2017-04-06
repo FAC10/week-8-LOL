@@ -1,0 +1,17 @@
+body {
+  font-size: 1.125em;
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1em;
+}
