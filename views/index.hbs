@@ -1,3 +1,10 @@
+{{> header}}
+
 <p>Hello Chello, qwertyuiop</p>
 
-{{jokes.[0].body}}
+{{#each jokes}}
+
+<li>{{body}}</li>
+<li>{{username}}</li>
+
+{{/each}}

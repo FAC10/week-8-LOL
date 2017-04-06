@@ -1,6 +1,6 @@
 const dbConnection = require('../database/db_connection.js');
 const getData = (cb) => {
-    dbConnection.query('SELECT * FROM jokes', (err, res) => {
+    dbConnection.query('SELECT * FROM jokes INNER JOIN users ON jokes.author_id = users.id', (err, res) => {
         if (err) cb(err);
         cb(null, res.rows);
     });
