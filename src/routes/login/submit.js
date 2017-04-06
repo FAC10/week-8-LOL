@@ -1,6 +1,6 @@
 module.exports = {
   method: 'GET',
-  path: '/',
+  path: '/login/submit',
   handler: (request, reply) => {
     return reply.view('index');
   }
