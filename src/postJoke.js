@@ -1,6 +1,6 @@
 const connect = require('../database/db_connection');
 
-const post_joke = (username, joke, cb) => {
+const postJoke = (username, joke, cb) => {
   getUserID(username, (err, res) => {
     if (err) return insertJoke(err);
     insertJoke(null, res, joke, cb);
@@ -24,4 +24,4 @@ const insertJoke = (err, userID, joke, cb) => {
   })
 }
 
-module.exports = post_joke;
+module.exports = postJoke;
