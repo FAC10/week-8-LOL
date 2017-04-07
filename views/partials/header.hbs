@@ -1,11 +1,12 @@
 <header>
-<form class='log_form' action='/login'>
+
 {{#if credentials.username}}
   <h1>Welcome back {{credentials.username}}!</h1>
-<button class='log_button' type="submit" >Log Out!</button>
+  <a href="/logout">Log Out!</a>
   <a href="/post">Post joke</a>
+
 {{else}}
-<button class='log_button' type="submit">Log In!</button>
+  <a href="/login">Log In!</a>
+
 {{/if}}
-</form>
 </header>
