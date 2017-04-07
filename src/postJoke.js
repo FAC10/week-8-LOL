@@ -2,7 +2,7 @@ const connect = require('../database/db_connection');
 
 const postJoke = (username, joke, cb) => {
   getUserID(username, (err, res) => {
-    if (err) insertJoke(err);
+    if (err) return insertJoke(err);
     insertJoke(null, res, joke, cb);
   });
 };

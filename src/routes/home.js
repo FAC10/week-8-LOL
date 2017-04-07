@@ -6,8 +6,7 @@ module.exports = {
   handler: (req, reply) => {
     get((err, jokes) => {
       if (err) {
-        console.log(err);
-        return;
+        return reply.redirect('Something went wrong sorry!');
       }
       const options = { jokes }
       if (req.auth.isAuthenticated) {
