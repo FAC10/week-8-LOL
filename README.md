@@ -5,28 +5,32 @@
 
 # Founders and Coders, LMAO Jokes
 
-Live site: [Herokuapp.com/](https://lmao-jokes.heroku.com)
+Live site: [Herokuapp.com/](http://lmao-jokes.herokuapp.com/)
 
 Scroll to the bottom of the README for installation instructions, if you would like to run our project locally!
 
 ### User Story
 
-As a member of Founders & Coders, I would like to securely access a site to share my interesting blogs.
+As a member of Founders & Coders, I would like to securely access a site to share my funny jokes.
 
 Thus, I should be able to:
-* add my blog to a database where it will stored, including my name and blog itself.
-* have my password securely encrypted
+* add my blog to a database where it will stored
+* be able to log in if I have my username and password in the database
+* see all jokes on the site
+* be automatically logged in via a cookie once I've logged in once
 
 ### Requirements
 
 - [ ] Ability to log in
 - [ ] Ability to log out
-- [ ] 
+- [ ] Account authentication against Heroku database of users with passwords
+- [ ] Session cookie to be dropped on the user once they've succesfully logged in
 
 ### Stretch goals:
 
 - [ ] Ability for new users to register for an account
-- [ ]
+- [ ] Password encryption
+- [ ] Script injection prevention
 
 ## Architecture & Planning
 
@@ -59,15 +63,15 @@ password | character varying(100) | not null
 
  - Run `npm install` to install all dependencies
 
-#### Database
+#### Database (To run the database locally)
 
  - Create a `config.env` file in the root of the project
 
- - Add the `DB_URL` variable
+ - Add the `DATABASE_URL` variable: DATABASE_URL = postgres://{usernameHereWithoutCurlys}@localhost:5432/lmao_jokes
 
 #### Run locally
 
- - Run `npm run devStart` to start the server using Nodemon (which will automatically restart Node when changes are detected in your files)
+ - Run `npm run startDev` to start the server using Nodemon (which will automatically restart Node when changes are detected in your files). 
 
  - Navigate to http://localhost:4000/ in your browser
 
