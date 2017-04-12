@@ -10,7 +10,6 @@ const routes = require('./routes');
 const server = new hapi.Server();
 
 server.connection({
-  // host: process.env.HOST || 'localhost',
   port: process.env.PORT || 3000,
 });
 
@@ -18,10 +17,11 @@ server.register([inert, vision, cookieAuth], (err) => {
   if (err) throw err;
 
   const options = {
-    password: 'Iamatemporarypasswordofover32characterssothatwecangetcookiesworking',
+    password: process.env.COOKIE_SECRET,
     cookie: 'cookie-name',
-    isSecure: false,
-    ttl: 2 * 60 * 60000,
+    isSecure: process.env.NODE_ENV === 'production',
+    ttl: null,
+    isSameSite: false,
   };
   server.auth.strategy('base', 'cookie', 'optional', options);
 
