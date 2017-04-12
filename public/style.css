@@ -1,5 +1,6 @@
 body {
-  font-size: 1.125em;
+  margin: 0;
+  font-size: 1em;
   font-family: Helvetica, sans-serif;
 }
 
@@ -14,4 +15,46 @@ ul {
 
 li {
   margin-top: 1em;
+}
+
+.container {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.header {
+  padding: 1em;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  color: white;
+  background-color: #406abf;
+}
+
+.header__brand {
+  font-size: 2em;
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: green;
+  border-radius: 2px;
+}
+
+.btn--dark {
+  background-color: #1b1c1d;
+  -webkit-transition: background-color 0.15s;
+  -o-transition: background-color 0.15s;
+  transition: background-color 0.15s;
+}
+
+.btn--dark:hover {
+  background-color: #3d4042;
 }
