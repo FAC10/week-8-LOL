@@ -1,7 +1,7 @@
 # week-8-LOL
 
-[![Build Status](***)
-[![codecov](***)
+[![Build Status](https://travis-ci.org/FAC10/week-8-LOL.svg?branch=master)](https://travis-ci.org/FAC10/week-8-LOL)
+[![codecov](https://codecov.io/gh/FAC10/week-8-LOL/branch/master/graph/badge.svg)](https://codecov.io/gh/FAC10/week-8-LOL)
 
 # Founders and Coders, LOL Jokes
 
