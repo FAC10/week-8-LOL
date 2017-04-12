@@ -1,5 +1,6 @@
 const queryString = require('querystring');
 const request = require('request');
+const saveUserData = require('./../save_user.js');
 
 module.exports = {
   method: 'GET',
@@ -14,10 +15,10 @@ module.exports = {
       const accessToken = parsed.access_token;
       const headers = {
         'User-Agent': 'oauth_github_lol',
-        Authorization: `token ${accessToken}`
+        Authorization: `token ${accessToken}`,
       };
       const urlUser = 'https://api.github.com/user';
-      request.get({url: urlUser, headers}, (err, res, body) => {
+      request.get({ url: urlUser, headers }, (err, res, body) => {
         if (err) console.log(err);
         const parsedBody = JSON.parse(body);
         const userData = {
@@ -26,9 +27,11 @@ module.exports = {
           name: parsedBody.name,
           pic: parsedBody.avatar_url,
         };
-        console.log(userData);
-      })
-      reply.redirect('/');
+        saveUserData(userData, (err) => {
+          if (err) console.log(err);
+          reply.redirect('/');
+        });
+      });
     });
   },
 };
