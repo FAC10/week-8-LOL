@@ -27,7 +27,12 @@ module.exports = {
           name: parsedBody.name,
           pic: parsedBody.avatar_url,
         };
-        req.cookieAuth.set({ accessToken, name: userData.name, pic: userData.pic });
+        req.cookieAuth.set({
+          accessToken,
+          name: userData.name,
+          pic: userData.pic,
+          username: userData.username,
+        });
         saveUserData(userData, (err) => {
           if (err) console.log(err);
           reply.redirect('/');
