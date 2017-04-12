@@ -1,11 +1,9 @@
-{{> header}}
-<h1>LMAO Jokes</h1>
-<ul>
+<ul class="grid">
   {{#each jokes}}
-  <li>
-    <article>
-      <p>{{body}}</p>
-      <footer><cite>{{username}}</cite></footer>
+  <li class=grid__item>
+    <article class="card">
+      <p class="card__body">{{body}}</p>
+      <footer class="card__footer"><cite>{{username}}</cite></footer>
     </article>
   </li>
   {{/each}}
