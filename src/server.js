@@ -1,6 +1,7 @@
 const hapi = require('hapi');
 const inert = require('inert');
 const vision = require('vision');
+const fs = require('fs');
 const hbs = require('handlebars');
 const cookieAuth = require('hapi-auth-cookie');
 
@@ -12,16 +13,20 @@ const server = new hapi.Server();
 server.connection({
   // host: process.env.HOST || 'localhost',
   port: process.env.PORT || 3000,
+  tls: {
+    key: fs.readFileSync('./keys/key.pem'),
+    cert: fs.readFileSync('./keys/cert.pem'),
+  },
 });
 
 server.register([inert, vision, cookieAuth], (err) => {
   if (err) throw err;
 
-  var options = {
+  const options = {
     password: 'Iamatemporarypasswordofover32characterssothatwecangetcookiesworking',
     cookie: 'cookie-name',
     isSecure: false,
-    ttl: 2 * 60 * 60000
+    ttl: 2 * 60 * 60000,
   };
   server.auth.strategy('base', 'cookie', 'optional', options);
 
