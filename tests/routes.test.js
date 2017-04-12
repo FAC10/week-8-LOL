@@ -14,26 +14,17 @@ const routes = {
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
     },
   ],
-  login: [
-    {
-      method: 'GET',
-      url: '/login',
-    },
-    {
-      statusCode: 200,
-      headers: { 'Content-Type': 'text/html; charset=utf-8' },
-    },
-  ],
-  // loginSubmit: [
+  // login: [
   //   {
-  //     method: 'POST',
-  //     url: '/login/submit',
+  //     method: 'GET',
+  //     url: '/login',
   //   },
   //   {
   //     statusCode: 200,
   //     headers: { 'Content-Type': 'text/html; charset=utf-8' },
   //   },
   // ],
+
   post: [
     {
       method: 'GET',
