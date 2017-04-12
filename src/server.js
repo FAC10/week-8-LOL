@@ -4,7 +4,6 @@ const vision = require('vision');
 const fs = require('fs');
 const hbs = require('handlebars');
 const cookieAuth = require('hapi-auth-cookie');
-require('env2')('config.env');
 
 const routes = require('./routes');
 

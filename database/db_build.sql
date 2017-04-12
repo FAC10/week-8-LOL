@@ -16,13 +16,6 @@ CREATE TABLE jokes (
   author_id integer REFERENCES users(id) ON UPDATE CASCADE
 );
 
-
-INSERT INTO users (username, password) VALUES
-('Maja', 'tralala'),
-('Alexis', 'latratra'),
-('Oli', 'hunter2'),
-('Lucy', 'w!ngard!um lev!osa');
-
 INSERT INTO jokes (body, author_id) VALUES
 ('There are only 10 kinds of people in this world: those who know binary and those who dont', 2),
 ('Whats the object-oriented way to become wealthy? -  Inheritance' , 1),
