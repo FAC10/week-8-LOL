@@ -11,7 +11,6 @@ const saveUserData = (userData, cb) => {
   name = excluded.name;`;
   connect.query(query, (err) => {
     if (err) return cb(err);
-    console.log('dnsovndsjnvok>>>');
     return cb(null);
   });
 };
