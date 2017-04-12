@@ -11,8 +11,8 @@ const getUserID = (username, cb) => {
   const queryUser = `SELECT users.id FROM users WHERE users.username = '${username}';`;
   connect.query(queryUser, (err, res) => {
     if (err) return cb(err);
-    cb(null, res.rows[0].id);
-  })
+    return cb(null, res.rows[0].id);
+  });
 };
 
 const insertJoke = (err, userID, joke, cb) => {
@@ -20,8 +20,8 @@ const insertJoke = (err, userID, joke, cb) => {
   const queryJoke = `INSERT INTO jokes (author_id, body) VALUES (${userID}, '${joke}');`;
   connect.query(queryJoke, (err, res) => {
     if (err) return cb(err);
-    cb(null);
-  })
-}
+    return cb(null);
+  });
+};
 
 module.exports = post_joke;
