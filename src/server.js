@@ -13,7 +13,7 @@ const server = new hapi.Server();
 server.connection({
   // host: process.env.HOST || 'localhost',
   port: process.env.PORT || 3000,
-  tls: {
+  tls: process.env.NODE_ENV !== 'production' && {
     key: fs.readFileSync('./keys/key.pem'),
     cert: fs.readFileSync('./keys/cert.pem'),
   },

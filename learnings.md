@@ -27,3 +27,17 @@ after_success:
 Set two `before_script`s in our Travis config to create a new Postgres database every time it runs our tests.
 
 We also need to specify our `DATABASE_URL` environment variable in Travis' settings (on the website). This is in the standard format: `postgres://postgres:@localhost/lmao_test`
+
+
+## Only use SSL cert & key locally
+
+Heroku has its own SSL implementation so we only need this for local testing.
+
+```js
+server.connection({
+  tls: process.env.NODE_ENV !== 'production' && {
+    key: fs.readFileSync('./keys/key.pem'),
+    cert: fs.readFileSync('./keys/cert.pem'),
+  },
+});
+```
