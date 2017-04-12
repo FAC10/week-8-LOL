@@ -3,3 +3,4 @@ DS_Store
 config.env
 npm-debug.log
 keys
+coverage
