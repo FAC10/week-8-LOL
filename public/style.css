@@ -17,11 +17,30 @@ ul {
 body {
   font-size: 1em;
   font-family: Helvetica, sans-serif;
+  color: #444;
   background-color: #eee;
 }
 
 ul {
   list-style-type: none;
+}
+
+cite {
+  font-style: normal;
+}
+
+input,
+button,
+label,
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+}
+
+textarea {
+  resize: vertical;
 }
 
 .container {
@@ -31,10 +50,12 @@ ul {
 }
 
 .header {
+  height: 5em;
   padding: 1em;
   display: flex;
   -ms-align-items: center;
   align-items: center;
+  font-size: 0.75em;
   color: white;
   background-color: #406abf;
 }
@@ -45,6 +66,12 @@ ul {
 
 .header__brand {
   font-size: 2em;
+}
+
+.header__logo {
+  width: 1.5em;
+  height: 1.5em;
+  fill: currentColor;
 }
 
 .header__nav {
@@ -73,21 +100,28 @@ ul {
   padding: 0.75em 1em;
   text-decoration: none;
   color: white;
-  background-color: grey;
-  /*border: 2px solid white;*/
+  background-color: #737b8c;
+  border: none;
   border-radius: 2px;
+  -webkit-transition: background-color 0.15s;
+  -o-transition: background-color 0.15s;
+  transition: background-color 0.15s;
+}
+
+.btn:hover {
+  background-color: #8592ad;
 }
 
 .btn--primary {
-  background-color: tomato;
-  /*border-color: transparent;*/
+  background-color: #f5593d;
+}
+
+.btn--primary:hover {
+  background-color: #ff7d66;
 }
 
 .btn--dark {
   background-color: #1b1c1d;
-  -webkit-transition: background-color 0.15s;
-  -o-transition: background-color 0.15s;
-  transition: background-color 0.15s;
 }
 
 .btn--dark:hover {
@@ -117,9 +151,13 @@ ul {
 }
 
 @media (min-width: 40em) {
+  .container {
+    padding: 2em;
+  }
   .header {
     padding-left: 2em;
     padding-right: 2em;
+    font-size: 1em;
   }
   .grid {
     margin-left: -1em;
@@ -163,4 +201,37 @@ ul {
   padding: 0.75em 1.5em;
   color: white;
   background-color: #7db2e8;
+}
+
+.form {
+  margin: 0 auto;
+  max-width: 30em;
+}
+
+.form__label,
+.form__input {
+  display: block;
+  width: 100%;
+}
+
+.form__label {
+  padding: 1em;
+  color: white;
+  background-color: #406abf;
+  border-radius: 3px 3px 0 0;
+}
+
+.form__input {
+  padding: 1em;
+  border: none;
+  border-radius: 0 0 3px 3px;
+}
+
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 10px 0 #7db2e8;
+}
+
+.form__btn {
+  margin-top: 1em;
 }
