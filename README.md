@@ -89,7 +89,7 @@ password | character varying(100) | not null
 
  - Run `npm run startDev` to start the server using Nodemon (which will automatically restart Node when changes are detected in your files).
 
- - Navigate to http://localhost:4000/ in your browser
+ - Navigate to http://localhost:3000/ in your browser
 
 #### Tests
 
