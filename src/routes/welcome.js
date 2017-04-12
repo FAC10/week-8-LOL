@@ -12,7 +12,22 @@ module.exports = {
     request.post(url, (err, res, body) => {
       const parsed = queryString.parse(body);
       const accessToken = parsed.access_token;
-      console.log(accessToken);
+      const headers = {
+        'User-Agent': 'oauth_github_lol',
+        Authorization: `token ${accessToken}`
+      };
+      const urlUser = 'https://api.github.com/user';
+      request.get({url: urlUser, headers}, (err, res, body) => {
+        if (err) console.log(err);
+        const parsedBody = JSON.parse(body);
+        const userData = {
+          id: parsedBody.id,
+          username: parsedBody.login,
+          name: parsedBody.name,
+          pic: parsedBody.avatar_url,
+        };
+        console.log(userData);
+      })
       reply.redirect('/');
     });
   },
