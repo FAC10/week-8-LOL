@@ -1,12 +1,17 @@
-<header>
-
-{{#if credentials.username}}
-  <h1>Welcome back {{credentials.username}}!</h1>
-  <a href="/logout">Log Out!</a>
-  <a href="/post">Post joke</a>
-
-{{else}}
-  <a href="/login">Log In!</a>
-
-{{/if}}
+<header class="header">
+  <div class="header__brand">
+    <span class="header__logo">LOL Jokes</span>
+  </div>
+  <nav class="header__nav">
+    {{#if credentials.username}}
+      <a class="btn btn--primary" href="/post">+ Joke</a>
+      <a class="btn" href="/logout">Log Out</a>
+      <figure>
+        <img src={{credentials.avatar_url}} alt="Your profile picture">
+        <figcaption>{{credentials.name}}</figcaption>
+      </figure>
+    {{else}}
+      <a class="btn btn--dark" href="/login">Sign up with Github</a>
+    {{/if}}
+  </nav>
 </header>
