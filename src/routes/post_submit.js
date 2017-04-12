@@ -4,11 +4,9 @@ module.exports = {
   method: 'POST',
   path: '/post/submit',
   handler: (request, reply) => {
-  // console.log(request.payload.username);
-
     post_joke('Oli', request.payload.joke, (err, res) => {
       if (err) {
-        return reply.redirect('Something went wrong sorry!');
+        return reply('Something went wrong sorry!');
       }
       else {
       return reply.redirect('/');

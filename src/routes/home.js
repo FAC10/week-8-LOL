@@ -1,12 +1,12 @@
-const get = require('./../handler_home');
+const getData = require('./../get_data');
 
 module.exports = {
   method: 'GET',
   path: '/',
   handler: (req, reply) => {
-    get.getData((err, jokes) => {
+    getData((err, jokes) => {
       if (err) {
-        return reply.redirect('Something went wrong sorry!');
+        return reply('Something went wrong sorry!');
       }
       const options = { jokes }
       if (req.auth.isAuthenticated) {
