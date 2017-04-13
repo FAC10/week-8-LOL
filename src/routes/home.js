@@ -1,3 +1,4 @@
+/* eslint no-param-reassign: ["error", { "props": false }]*/
 const getData = require('./../get_data');
 
 module.exports = {
@@ -17,7 +18,7 @@ module.exports = {
           }
         });
       }
-      reply.view('index', options);
+      return reply.view('index', options);
     });
   },
 
