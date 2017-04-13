@@ -3,7 +3,7 @@
   <li class=grid__item>
     <article class="card">
       <p class="card__body">{{body}}</p>
-      <footer class="card__footer">
+      <footer class="card__footer" {{#if self}}style="background-color: #ff7d66"{{/if}}>
         {{#if self}}
         <a class="card__link" href="/delete/{{username}}/{{id}}">
           <svg class="" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
