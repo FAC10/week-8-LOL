@@ -31,8 +31,8 @@ const routes = {
       url: '/post',
     },
     {
-      statusCode: 200,
-      headers: { 'Content-Type': 'text/html; charset=utf-8' },
+      statusCode: 401,
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
     },
   ],
   // submitPost: [
