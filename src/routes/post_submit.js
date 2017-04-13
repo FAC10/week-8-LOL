@@ -6,7 +6,8 @@ module.exports = {
   handler: (request, reply) => {
     postJoke(request.auth.credentials.username, request.payload.joke, (err) => {
       if (err) {
-        return reply('Something went wrong sorry!');
+        const options = { message: 'Something went wrong, sorry!' };
+        return reply.view('index', options);
       }
       return reply.redirect('/');
     });
