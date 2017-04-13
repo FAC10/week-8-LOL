@@ -6,4 +6,5 @@ module.exports = [
   require('./post_submit.js'),
   require('./logout.js'),
   require('./welcome.js'),
+  require('./delete.js'),
 ];
