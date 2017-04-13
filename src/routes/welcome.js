@@ -6,6 +6,7 @@ module.exports = {
   method: 'GET',
   path: '/welcome',
   handler: (req, reply) => {
+    if (req.auth.isAuthenticated) return reply.redirect('/');
     const code = req.url.query.code;
 
     const url = `https://github.com/login/oauth/access_token?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}&code=${code}`;
