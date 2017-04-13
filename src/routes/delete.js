@@ -1,0 +1,14 @@
+const delete_joke = require('./../delete_joke.js');
+
+module.exports = {
+  path: '/delete/{id}',
+  method: 'GET',
+  handler: (req, reply) => {
+    delete_joke(req.params.id, (err) => {
+      if (err) {
+        return reply('Something went wrong, sorry!');
+      }
+      return reply.redirect('/');
+    });
+  },
+};
