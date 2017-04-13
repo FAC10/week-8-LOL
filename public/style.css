@@ -202,9 +202,26 @@ textarea {
   display: flex;
   -ms-align-items: center;
   align-items: center;
-  justify-content: flex-end;
   color: white;
   background-color: #7db2e8;
+}
+
+.card__link {
+  color: white;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.card__link:hover {
+  color: #f5593d;
+}
+
+.card__profile {
+  margin-left: auto;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
 }
 
 .card__img {
@@ -213,6 +230,7 @@ textarea {
   height: 2em;
   border: 2px solid white;
   border-radius: 50%;
+}
 
 .form {
   margin: 0 auto;
