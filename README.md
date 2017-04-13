@@ -36,6 +36,8 @@
 
 ## User Story
 
+Click [here](https://github.com/FAC10/week-8-LOL/issues/41) to see our user's journey in a diagram. 
+
 As a member of Founders and Coders, who wants to learn from my fellow devs
 
 - [x] I want to log in with my Github account
