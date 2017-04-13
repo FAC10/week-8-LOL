@@ -1,10 +1,9 @@
 module.exports = [
-  require('./home.js'),
-  require('./static.js'),
-  require('./login.js'),
-  require('./post.js'),
-  require('./post_submit.js'),
-  require('./logout.js'),
-  require('./welcome.js'),
-  require('./delete.js'),
-];
+  './home.js',
+  './static.js',
+  './post.js',
+  './post_submit.js',
+  './logout.js',
+  './welcome.js',
+  './delete.js',
+].map(require);

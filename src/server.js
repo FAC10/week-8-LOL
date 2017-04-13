@@ -1,7 +1,6 @@
 const hapi = require('hapi');
 const inert = require('inert');
 const vision = require('vision');
-const fs = require('fs');
 const hbs = require('handlebars');
 const cookieAuth = require('hapi-auth-cookie');
 
@@ -15,7 +14,6 @@ server.connection({
 
 server.register([inert, vision, cookieAuth], (err) => {
   if (err) throw err;
-
   const options = {
     password: process.env.COOKIE_SECRET,
     cookie: 'cookie-name',
@@ -24,7 +22,6 @@ server.register([inert, vision, cookieAuth], (err) => {
     isSameSite: false,
   };
   server.auth.strategy('base', 'cookie', 'optional', options);
-
   server.route(routes);
 });
 

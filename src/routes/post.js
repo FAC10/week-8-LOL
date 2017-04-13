@@ -7,5 +7,5 @@ module.exports = {
       options.credentials = req.auth.credentials;
     }
     return reply.view('post', options);
-  }
-}
+  },
+};
