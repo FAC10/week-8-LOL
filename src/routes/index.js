@@ -6,4 +6,5 @@ module.exports = [
   './logout.js',
   './welcome.js',
   './delete.js',
+  './login.js',
 ].map(require);

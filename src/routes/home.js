@@ -7,7 +7,8 @@ module.exports = {
   handler: (req, reply) => {
     getData((err, jokes) => {
       if (err) {
-        return reply('Something went wrong sorry!');
+        const options = { message: 'Something went wrong, sorry!' };
+        return reply.view('index', options);
       }
       const options = { jokes };
       if (req.auth.isAuthenticated) {
