@@ -1,6 +1,9 @@
 module.exports = {
   method: 'GET',
   path: '/post',
+  config: {
+    auth: 'base',
+  },
   handler: (req, reply) => {
     const options = { };
     if (req.auth.isAuthenticated) {
